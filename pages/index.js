@@ -1,20 +1,46 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
+import { Box, Button, Text, TextField, Image } from '@skynexui/components';
 
+import { ThemeProvider, useTheme } from 'styled-components';
 import GlobalStyle from '../src/styles/global';
-import spartan from '../src/styles/themes/spartan';
+import theme from '../src/styles/themes/spartan';
 
 function Title(props) {
-  return <h1>{props.children}</h1>;
+  const Tag = props.tag || 'h1';
+  return (
+    <>
+      <Tag>{props.children}</Tag>
+      <style jsx>{`
+        ${Tag} {
+          color: ${theme.colors.neutrals[50]};
+          font-size: 24px;
+          font-weight: 600;
+        }
+      `}</style>
+    </>
+  );
 }
 
 export default function HomePage() {
+  const username = 'rvahilario';
+
   return (
-    <ThemeProvider theme={spartan}>
-      <main>
-        <Title>Welcome to the jungle!</Title>
-      </main>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
+      <Box
+        styleSheet={{
+          display: 'flex',
+          alignItems: 'center',
+          padding: '0 200px',
+          backgroundColor: theme.colors.neutrals[50],
+          backgroundImage:
+            'url(https://raw.githubusercontent.com/rvahilario/assets/main/hilaricord/images/old-kratos.jpg)',
+          backgroundPosition: 'right',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          backgroundBlendMode: 'multiply',
+        }}
+      ></Box>
     </ThemeProvider>
   );
 }
