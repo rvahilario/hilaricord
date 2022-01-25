@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, Button, Text, TextField, Image } from '@skynexui/components';
 
 import theme from '../src/styles/themes/spartan';
@@ -21,7 +21,7 @@ function Title(props) {
 }
 
 export default function HomePage() {
-  const username = 'rvahilario';
+  const [username, setUsername] = useState('rvahilario');
 
   return (
     <>
@@ -81,6 +81,11 @@ export default function HomePage() {
               {theme.name}
             </Text>
             <TextField
+              value={username}
+              onChange={function (event) {
+                const value = event.target.value;
+                setUsername(value);
+              }}
               fullWidth
               textFieldColors={{
                 neutral: {
