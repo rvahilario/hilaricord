@@ -105,6 +105,44 @@ export default function HomePage() {
               }}
             />
           </Box>
+          {/* Formulary */}
+
+          {/* Photo Area */}
+          <Box
+            styleSheet={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              maxWidth: '200px',
+              padding: '16px',
+              backgroundColor: theme.colors.neutrals[800],
+              border: '1px solid',
+              borderColor: theme.colors.neutrals[900],
+              borderRadius: '10px',
+              flex: 1,
+              minHeight: '240px',
+            }}
+          >
+            <Image
+              styleSheet={{
+                borderRadius: '50%',
+                marginBottom: '16px',
+              }}
+              src={`https://github.com/${username}.png`}
+            />
+            <Text
+              variant="body4"
+              styleSheet={{
+                color: theme.colors.neutrals[200],
+                backgroundColor: theme.colors.neutrals[900],
+                padding: '3px 10px',
+                borderRadius: '100px',
+              }}
+            >
+              {username}
+            </Text>
+          </Box>
+          {/* Photo Area */}
         </Box>
       </Box>
     </ThemeProvider>
