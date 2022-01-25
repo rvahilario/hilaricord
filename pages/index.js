@@ -1,9 +1,6 @@
 import React from 'react';
 import { Box, Button, Text, TextField, Image } from '@skynexui/components';
 
-import { ThemeProvider } from 'styled-components';
-import GlobalStyle from '../src/styles/global';
-import FontStyles from '../src/styles/fontStyles';
 import theme from '../src/styles/themes/spartan';
 
 function Title(props) {
@@ -27,9 +24,7 @@ export default function HomePage() {
   const username = 'rvahilario';
 
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <FontStyles />
+    <>
       <Box
         styleSheet={{
           display: 'flex',
@@ -148,6 +143,6 @@ export default function HomePage() {
           {/* Photo Area */}
         </Box>
       </Box>
-    </ThemeProvider>
+    </>
   );
 }
