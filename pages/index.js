@@ -13,7 +13,7 @@ function Title(props) {
       <style jsx>{`
         ${Tag} {
           color: ${theme.colors.neutrals[50]};
-          font-size: 24px;
+          font-size: 22px;
           font-weight: 600;
         }
       `}</style>
@@ -72,7 +72,7 @@ export default function HomePage() {
               marginBottom: '32px',
             }}
           >
-            <Title>Boas vindas de volta!</Title>
+            <Title>Welcome back, Spartan!</Title>
             <Text
               variant="body3"
               styleSheet={{
@@ -91,6 +91,17 @@ export default function HomePage() {
                   mainColorHighlight: theme.colors.primary[500],
                   backgroundColor: theme.colors.neutrals[800],
                 },
+              }}
+            />
+            <Button
+              type="submit"
+              label="Enter"
+              fullWidth
+              buttonColors={{
+                contrastColor: theme.colors.neutrals[50],
+                mainColor: theme.colors.primary[600],
+                mainColorLight: theme.colors.primary[500],
+                mainColorStrong: theme.colors.primary[700],
               }}
             />
           </Box>
