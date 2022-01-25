@@ -40,7 +40,62 @@ export default function HomePage() {
           backgroundSize: 'cover',
           backgroundBlendMode: 'multiply',
         }}
-      ></Box>
+      >
+        <Box
+          styleSheet={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            flexDirection: {
+              xs: 'column',
+              sm: 'row',
+            },
+            width: '100%',
+            maxWidth: '600px',
+            borderRadius: '10px',
+            padding: '32px',
+            margin: '16px',
+            boxShadow: '0 2px 10px 0 rgb(0 0 0 / 50%)',
+            backgroundColor: theme.colors.neutrals[700],
+          }}
+        >
+          {/* Formulary */}
+          <Box
+            as="form"
+            styleSheet={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: { xs: '100%', sm: '50%' },
+              textAlign: 'center',
+              marginBottom: '32px',
+            }}
+          >
+            <Title>Boas vindas de volta!</Title>
+            <Text
+              variant="body3"
+              styleSheet={{
+                marginBottom: '32px',
+                color: theme.colors.neutrals[300],
+              }}
+            >
+              {theme.name}
+            </Text>
+            <TextField
+              fullWidth
+              textFieldColors={{
+                neutral: {
+                  textColor: theme.colors.neutrals[200],
+                  mainColor: theme.colors.neutrals[900],
+                  mainColorHighlight: theme.colors.primary[500],
+                  backgroundColor: theme.colors.neutrals[800],
+                },
+              }}
+            />
+          </Box>
+        </Box>
+      </Box>
     </ThemeProvider>
   );
 }
