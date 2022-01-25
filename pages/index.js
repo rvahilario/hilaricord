@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Box, Button, Text, TextField, Image } from '@skynexui/components';
 
 import theme from '../src/styles/themes/spartan';
+import { useRouter } from 'next/router';
 
 function Title(props) {
   const Tag = props.tag || 'h1';
@@ -22,6 +23,7 @@ function Title(props) {
 
 export default function HomePage() {
   const [username, setUsername] = useState('rvahilario');
+  const router = useRouter();
 
   return (
     <>
@@ -60,6 +62,10 @@ export default function HomePage() {
           {/* Formulary */}
           <Box
             as="form"
+            onSubmit={function (event) {
+              event.preventDefault();
+              router.push('/chat');
+            }}
             styleSheet={{
               display: 'flex',
               flexDirection: 'column',
