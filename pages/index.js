@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Button, Text, TextField, Image } from '@skynexui/components';
 
-import { ThemeProvider, useTheme } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 import GlobalStyle from '../src/styles/global';
 import FontStyles from '../src/styles/fontStyles';
 import theme from '../src/styles/themes/spartan';
