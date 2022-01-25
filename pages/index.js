@@ -1,16 +1,20 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
 
-export default function Home() {
+import GlobalStyle from '../src/styles/global';
+import dark from '../src/styles/themes/dark';
+
+function Title(props) {
+  return <h1>{props.children}</h1>;
+}
+
+export default function HomePage() {
   return (
-    <div>
+    <ThemeProvider theme={dark}>
       <main>
         <Title>Welcome to the jungle!</Title>
       </main>
-    </div>
+      <GlobalStyle />
+    </ThemeProvider>
   );
 }
-
-const Title = styled.h1`
-  color: red;
-`;
