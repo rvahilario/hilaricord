@@ -1,5 +1,5 @@
 export default {
-  name: 'spartan',
+  name: 'Aluracord - Spartan (peas)',
 
   colors: {
     primary: {
