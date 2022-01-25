@@ -2,7 +2,7 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
 import GlobalStyle from '../src/styles/global';
-import dark from '../src/styles/themes/dark';
+import spartan from '../src/styles/themes/spartan';
 
 function Title(props) {
   return <h1>{props.children}</h1>;
@@ -10,7 +10,7 @@ function Title(props) {
 
 export default function HomePage() {
   return (
-    <ThemeProvider theme={dark}>
+    <ThemeProvider theme={spartan}>
       <main>
         <Title>Welcome to the jungle!</Title>
       </main>
