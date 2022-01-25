@@ -3,6 +3,7 @@ import { Box, Button, Text, TextField, Image } from '@skynexui/components';
 
 import { ThemeProvider, useTheme } from 'styled-components';
 import GlobalStyle from '../src/styles/global';
+import FontStyles from '../src/styles/fontStyles';
 import theme from '../src/styles/themes/spartan';
 
 function Title(props) {
@@ -13,8 +14,9 @@ function Title(props) {
       <style jsx>{`
         ${Tag} {
           color: ${theme.colors.neutrals[50]};
-          font-size: 22px;
-          font-weight: 600;
+          font-family: 'godOfWar';
+          font-size: 28px;
+          font-weight: 400;
         }
       `}</style>
     </>
@@ -27,12 +29,13 @@ export default function HomePage() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
+      <FontStyles />
       <Box
         styleSheet={{
           display: 'flex',
           alignItems: 'center',
           padding: '0 200px',
-          backgroundColor: theme.colors.neutrals[50],
+          backgroundColor: theme.colors.primary[100],
           backgroundImage:
             'url(https://raw.githubusercontent.com/rvahilario/assets/main/hilaricord/images/old-kratos.jpg)',
           backgroundPosition: 'right',

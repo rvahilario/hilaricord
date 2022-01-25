@@ -27,4 +27,6 @@ export default {
       900: '#1b1b1b',
     },
   },
+
+  fonts: 'godOfWar',
 };

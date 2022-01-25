@@ -1,6 +1,14 @@
 import { createGlobalStyle } from 'styled-components';
+// import godOfWar from '../styles/themes/fonts/god-of-war.ttf';
 
 export default createGlobalStyle`
+  @font-face {
+    font-family: 'godOfWar';
+    src: url(../styles/themes/fonts/god-of-war.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
   * {
     margin: 0;
     padding: 0;
