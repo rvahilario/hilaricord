@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Box, Button, Text, TextField, Image } from '@skynexui/components';
 
-import theme from '../src/styles/themes/spartan';
+import theme from '../styles/themes/spartan';
 import { useRouter } from 'next/router';
 
 function Title(props) {
