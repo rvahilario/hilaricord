@@ -3,6 +3,20 @@ import React, { useState } from 'react';
 import theme from '../styles/themes/spartan';
 
 export default function ChatPage() {
+  const [message, setMessage] = useState('');
+  const [listMessages, setlistMessages] = useState([]);
+
+  function handleNewMessage(newMessage) {
+    const message = {
+      id: listMessages.length + 1,
+      sender: 'suyhil',
+      text: newMessage,
+    };
+
+    setlistMessages([message, ...listMessages]);
+    setMessage('');
+  }
+
   return (
     <Box
       styleSheet={{
@@ -51,6 +65,17 @@ export default function ChatPage() {
             }}
           >
             <TextField
+              value={message}
+              onChange={(event) => {
+                const value = event.target.value;
+                setMessage(value);
+              }}
+              onKeyPress={(event) => {
+                if (event.key === 'Enter') {
+                  event.preventDefault();
+                  handleNewMessage(message);
+                }
+              }}
               placeholder="Insert your message here..."
               type="textarea"
               styleSheet={{
