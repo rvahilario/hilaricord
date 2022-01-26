@@ -31,6 +31,7 @@ export default {
   backgroundImage: {
     login:
       'https://raw.githubusercontent.com/rvahilario/assets/main/hilaricord/images/old-kratos.jpg',
+    chat: 'https://raw.githubusercontent.com/rvahilario/assets/main/hilaricord/images/old-kratos.jpg',
   },
 
   fonts: 'godOfWar',
