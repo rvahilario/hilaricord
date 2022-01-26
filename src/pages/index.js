@@ -33,8 +33,7 @@ export default function HomePage() {
           alignItems: 'center',
           padding: '0 200px',
           backgroundColor: theme.colors.primary[100],
-          backgroundImage:
-            'url(https://raw.githubusercontent.com/rvahilario/assets/main/hilaricord/images/old-kratos.jpg)',
+          backgroundImage: `url(${theme.backgroundImage.login})`,
           backgroundPosition: 'right',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
