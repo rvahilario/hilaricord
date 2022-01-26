@@ -42,7 +42,30 @@ export default function ChatPage() {
             borderRadius: '5px',
             padding: '16px',
           }}
-        ></Box>
+        >
+          <Box
+            as="form"
+            styleSheet={{
+              display: 'flex',
+              alignItems: 'center',
+            }}
+          >
+            <TextField
+              placeholder="Insert your message here..."
+              type="textarea"
+              styleSheet={{
+                width: '100%',
+                border: '0',
+                resize: 'none',
+                borderRadius: '5px',
+                padding: '6px 8px',
+                backgroundColor: theme.colors.neutrals[800],
+                marginRight: '12px',
+                color: theme.colors.neutrals[200],
+              }}
+            />
+          </Box>
+        </Box>
       </Box>
     </Box>
   );
