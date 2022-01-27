@@ -1,10 +1,28 @@
+import React, { useEffect, useState } from 'react';
+import { createClient } from '@supabase/supabase-js';
+
 import { Box, Text, TextField, Image, Button } from '@skynexui/components';
-import React, { useState } from 'react';
 import theme from '../styles/themes/spartan';
+
+// Key made public only for study purpose
+const SUPABASE_ANON_KEY =
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTY0MzI5MDk4NSwiZXhwIjoxOTU4ODY2OTg1fQ.DwIPDyz67bhxhG7Xpe8UJ1-navJJjjS_VP7cUC7R4kY';
+const SUPABASE_URL = 'https://yubshiffssogmzgakkbb.supabase.co';
+const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 export default function ChatPage() {
   const [message, setMessage] = useState('');
   const [listMessages, setListMessages] = useState([]);
+
+  useEffect(() => {
+    supabaseClient
+      .from('hilaricord_messages')
+      .select('*')
+      .then(({ data }) => {
+        console.log('Data from request:', data);
+        setListMessages(data.reverse());
+      });
+  }, []);
 
   function handleNewMessage(newMessage) {
     const message = {
