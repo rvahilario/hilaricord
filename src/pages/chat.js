@@ -58,6 +58,7 @@ export default function ChatPage() {
             padding: '16px',
           }}
         >
+          <MessagesList listMessages={listMessages} />
           <Box
             as="form"
             styleSheet={{
@@ -118,5 +119,67 @@ function Header() {
         />
       </Box>
     </>
+  );
+}
+
+function MessagesList(props) {
+  return (
+    <Box
+      tag="ul"
+      styleSheet={{
+        overflow: 'scroll',
+        display: 'flex',
+        flexDirection: 'column-reverse',
+        flex: 1,
+        color: theme.colors.neutrals[50],
+        marginBottom: '16px',
+      }}
+    >
+      {props.listMessages.map((actualMessage) => {
+        return (
+          <Text
+            key={actualMessage.id}
+            tag="li"
+            styleSheet={{
+              borderRadius: '5px',
+              padding: '6px',
+              marginBottom: '12px',
+              hover: {
+                backgroundColor: theme.colors.neutrals[700],
+              },
+            }}
+          >
+            <Box
+              styleSheet={{
+                marginBottom: '8px',
+              }}
+            >
+              <Image
+                styleSheet={{
+                  width: '20px',
+                  height: '20px',
+                  borderRadius: '50%',
+                  display: 'inline-block',
+                  marginRight: '8px',
+                }}
+                src={`https://github.com/${actualMessage.sender}.png`}
+              />
+              <Text tag="strong">{actualMessage.sender}</Text>
+              <Text
+                styleSheet={{
+                  fontSize: '10px',
+                  marginLeft: '8px',
+                  color: theme.colors.neutrals[300],
+                }}
+                tag="span"
+              >
+                {new Date().toLocaleDateString()}
+              </Text>
+            </Box>
+            {actualMessage.text}
+          </Text>
+        );
+      })}
+    </Box>
   );
 }
