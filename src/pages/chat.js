@@ -9,8 +9,8 @@ export default function ChatPage() {
   function handleNewMessage(newMessage) {
     const message = {
       id: listMessages.length + 1,
-      sender: 'suyhil',
-      text: newMessage,
+      de: 'suyhil',
+      texto: newMessage,
     };
 
     setListMessages([message, ...listMessages]);
@@ -162,9 +162,9 @@ function MessagesList(props) {
                   display: 'inline-block',
                   marginRight: '8px',
                 }}
-                src={`https://github.com/${actualMessage.sender}.png`}
+                src={`https://github.com/${actualMessage.de}.png`}
               />
-              <Text tag="strong">{actualMessage.sender}</Text>
+              <Text tag="strong">{actualMessage.de}</Text>
               <Text
                 styleSheet={{
                   fontSize: '10px',
@@ -176,7 +176,7 @@ function MessagesList(props) {
                 {new Date().toLocaleDateString()}
               </Text>
             </Box>
-            {actualMessage.text}
+            {actualMessage.texto}
           </Text>
         );
       })}
