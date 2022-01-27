@@ -4,7 +4,7 @@ import theme from '../styles/themes/spartan';
 
 export default function ChatPage() {
   const [message, setMessage] = useState('');
-  const [listMessages, setlistMessages] = useState([]);
+  const [listMessages, setListMessages] = useState([]);
 
   function handleNewMessage(newMessage) {
     const message = {
@@ -13,7 +13,7 @@ export default function ChatPage() {
       text: newMessage,
     };
 
-    setlistMessages([message, ...listMessages]);
+    setListMessages([message, ...listMessages]);
     setMessage('');
   }
 
