@@ -11,22 +11,22 @@ const SUPABASE_URL = 'https://yubshiffssogmzgakkbb.supabase.co';
 const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 export default function ChatPage() {
-  const [message, setMessage] = useState('');
-  const [listMessages, setListMessages] = useState([]);
+  const [message, setMessage] = React.useState('');
+  const [listMessages, setListMessages] = React.useState([]);
 
   useEffect(() => {
     supabaseClient
       .from('hilaricord_messages')
       .select('*')
       .then(({ data }) => {
-        console.log('Data from request:', data);
+        // console.log('Data from request:', data);
         setListMessages(data.reverse());
       });
   }, []);
 
   function handleNewMessage(newMessage) {
     const message = {
-      id: listMessages.length + 1,
+      // id: listMessages.length + 1,
       de: 'suyhil',
       texto: newMessage,
     };
