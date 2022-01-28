@@ -6,10 +6,12 @@ import theme from '../styles/themes/spartan';
 
 export default function CustomApp({ Component, pageProps }) {
   return (
-    <ThemeProvider theme={theme}>
+    <>
       <FontStyles />
-      <GlobalStyle />
-      <Component {...pageProps} />
-    </ThemeProvider>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </>
   );
 }
