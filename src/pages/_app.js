@@ -7,9 +7,9 @@ import theme from '../styles/themes/spartan';
 export default function CustomApp({ Component, pageProps }) {
   return (
     <>
+      <GlobalStyle />
       <FontStyles />
       <ThemeProvider theme={theme}>
-        <GlobalStyle />
         <Component {...pageProps} />
       </ThemeProvider>
     </>

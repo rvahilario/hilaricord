@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import theme from './themes/spartan';
 
 export default createGlobalStyle`
   * {
@@ -9,9 +10,9 @@ export default createGlobalStyle`
   }
 
   body {
-    background-color: ${(props) => props.theme.colors.neutrals[900]};
+    background-color: ${theme.colors.neutrals[900]};
     font-size: 14px;
-    color: ${(props) => props.theme.colors.primary[50]};
+    color: ${theme.colors.primary[50]};
     font-family: 'Open Sans', sans-serif;
 
   }
