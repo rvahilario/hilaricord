@@ -1,5 +1,5 @@
 export default {
-  name: 'Aluracord - Spartan (rvahilario)',
+  name: 'Aluracord - God Of War (Hilario)',
 
   colors: {
     primary: {
