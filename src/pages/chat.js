@@ -42,7 +42,7 @@ export default function ChatPage() {
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: theme.colors.primary[500],
-        backgroundImage: `url(${theme.backgroundImage.chat})`,
+        backgroundImage: `url(${theme.background.chat})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         backgroundBlendMode: 'multiply',
