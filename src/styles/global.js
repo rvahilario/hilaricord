@@ -18,7 +18,7 @@ export default createGlobalStyle`
   }
 
   html, body, #__next {
-        min-height: 100vh;
+        min-height: 100%;
         display: flex;
         flex: 1;
       /* App fit Height */
