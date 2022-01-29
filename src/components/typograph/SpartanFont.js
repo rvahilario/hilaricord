@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import theme from '../../styles/themes/spartan';
 
 function SpartanFont(props) {
   return <StyledFont>{props.children}</StyledFont>;
