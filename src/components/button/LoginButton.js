@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const LoginButton = styled.button`
   background-color: ${({ theme }) => theme.colors.primary._600};
-  width: 100%;
+  /* max-width: 100%; */
+  width: 50%;
   height: 30px;
   border: none;
   border-radius: 10px;

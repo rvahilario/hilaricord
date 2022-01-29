@@ -28,8 +28,8 @@ const Container = styled.div`
   justify-content: center;
   width: 80%;
   height: 81%;
-  margin-top: 45px;
-  margin-left: 10px;
+  margin-top: 8%;
+  margin-left: 1%;
   border-radius: 10000px;
   background: radial-gradient(
     circle,

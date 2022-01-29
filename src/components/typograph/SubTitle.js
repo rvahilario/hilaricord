@@ -11,7 +11,7 @@ function SubTitle(props) {
 
 const Container = styled.span`
   color: ${({ theme }) => theme.colors.neutrals._300};
-  margin-bottom: 32px;
+  margin-bottom: 10%;
 `;
 
 export default SubTitle;
