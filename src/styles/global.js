@@ -7,7 +7,6 @@ export default createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     list-style: none;
-
   }
 
   body {
@@ -15,7 +14,6 @@ export default createGlobalStyle`
     font-size: 14px;
     color: ${theme.colors.primary[50]};
     font-family: 'Open Sans', sans-serif;
-
   }
 
   html, body, #__next {
