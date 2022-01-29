@@ -28,9 +28,8 @@ export default {
     },
   },
 
-  backgroundImage: {
-    login:
-      'https://raw.githubusercontent.com/rvahilario/assets/main/hilaricord/images/old-kratos.jpg',
+  background: {
+    loginVideo: '/bg_video.mp4',
     chat: 'https://raw.githubusercontent.com/rvahilario/assets/main/hilaricord/images/old-kratos.jpg',
   },
 
