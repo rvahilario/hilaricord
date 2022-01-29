@@ -4,23 +4,24 @@ import { useRouter } from 'next/router';
 
 import theme from '../styles/themes/spartan';
 import BackgroundVideo from '../components/backgroundVideo/BackgroundVideo';
+import SpartanFont from '../components/typograph/SpartanFont';
 
-function Title(props) {
-  const Tag = props.tag || 'h1';
-  return (
-    <>
-      <Tag>{props.children}</Tag>
-      <style jsx>{`
-        ${Tag} {
-          color: ${theme.colors.neutrals[50]};
-          font-family: 'godOfWar';
-          font-size: 28px;
-          font-weight: 400;
-        }
-      `}</style>
-    </>
-  );
-}
+// function Title(props) {
+//   const Tag = props.tag || 'h1';
+//   return (
+//     <>
+//       <Tag>{props.children}</Tag>
+//       <style jsx>{`
+//         ${Tag} {
+//           color: ${theme.colors.neutrals[50]};
+//           font-family: 'godOfWar';
+//           font-size: 28px;
+//           font-weight: 400;
+//         }
+//       `}</style>
+//     </>
+//   );
+// }
 
 export default function HomePage() {
   const [username, setUsername] = useState('rvahilario');
@@ -29,7 +30,9 @@ export default function HomePage() {
   return (
     <>
       <BackgroundVideo>
-        <Title>Hello Spartan!</Title>
+        <SpartanFont>
+          <h1>Hello Spartan!</h1>
+        </SpartanFont>
       </BackgroundVideo>
     </>
   );
