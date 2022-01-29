@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Box, Button, Text, TextField, Image } from '@skynexui/components';
+import { useRouter } from 'next/router';
 
 import theme from '../styles/themes/spartan';
-import { useRouter } from 'next/router';
+import BackgroundVideo from '../components/backgroundVideo/BackgroundVideo';
 
 function Title(props) {
   const Tag = props.tag || 'h1';
@@ -27,13 +28,22 @@ export default function HomePage() {
 
   return (
     <>
+      <BackgroundVideo>
+        <Title>Hello Spartan!</Title>
+      </BackgroundVideo>
+    </>
+  );
+
+  {
+    /*return (
+    <>
       <Box
         styleSheet={{
           display: 'flex',
           alignItems: 'center',
           padding: '0 200px',
           backgroundColor: theme.colors.primary[100],
-          backgroundImage: `url(${theme.backgroundImage.login})`,
+          backgroundImage: `url(${theme.background.login})`,
           backgroundPosition: 'right',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
@@ -58,7 +68,7 @@ export default function HomePage() {
             backgroundColor: theme.colors.neutrals[700],
           }}
         >
-          {/* Formulary */}
+
           <Box
             as="form"
             onSubmit={function (event) {
@@ -113,9 +123,7 @@ export default function HomePage() {
               }}
             />
           </Box>
-          {/* Formulary */}
 
-          {/* Photo Area */}
           <Box
             styleSheet={{
               display: 'flex',
@@ -150,9 +158,9 @@ export default function HomePage() {
               {username}
             </Text>
           </Box>
-          {/* Photo Area */}
         </Box>
       </Box>
     </>
-  );
+  );*/
+  }
 }
