@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import theme from '../styles/themes/spartan';
 import BackgroundVideo from '../components/backgroundVideo/BackgroundVideo';
 import SpartanFont from '../components/typograph/SpartanFont';
+import LoginBox from '../components/loginBox/LoginBox';
 
 // function Title(props) {
 //   const Tag = props.tag || 'h1';
@@ -30,9 +31,11 @@ export default function HomePage() {
   return (
     <>
       <BackgroundVideo>
-        <SpartanFont>
-          <h1>Hello Spartan!</h1>
-        </SpartanFont>
+        <LoginBox>
+          <SpartanFont>
+            <h1>Hello Spartan!</h1>
+          </SpartanFont>
+        </LoginBox>
       </BackgroundVideo>
     </>
   );
@@ -53,7 +56,7 @@ export default function HomePage() {
           backgroundBlendMode: 'multiply',
         }}
       >
-        <Box
+        <Box ==============================
           styleSheet={{
             display: 'flex',
             alignItems: 'center',
