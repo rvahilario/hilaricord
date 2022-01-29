@@ -5,7 +5,14 @@ import { useRouter } from 'next/router';
 import theme from '../styles/themes/spartan';
 import BackgroundVideo from '../components/backgroundVideo/BackgroundVideo';
 import SpartanFont from '../components/typograph/SpartanFont';
-import LoginBox from '../components/loginBox/LoginBox';
+import LoginBox from '../components/boxs/LoginBox';
+import FrameLoginBox from '../components/boxs/FrameLoginBox';
+import FormBox from '../components/boxs/FormBox';
+import SubTitle from '../components/typograph/SubTitle';
+import { InputBox } from '../components/input/InputText';
+import { LoginButton } from '../components/button/LoginButton';
+import InfoBox from '../components/boxs/InfoBox';
+import Avatar from '../components/avatars/Avatar';
 
 // function Title(props) {
 //   const Tag = props.tag || 'h1';
@@ -31,11 +38,27 @@ export default function HomePage() {
   return (
     <>
       <BackgroundVideo>
-        <LoginBox>
-          <SpartanFont>
-            <h1>Hello Spartan!</h1>
-          </SpartanFont>
-        </LoginBox>
+        <FrameLoginBox>
+          <LoginBox>
+            <FormBox>
+              <SpartanFont>
+                <label>Hello Spartan!</label>
+              </SpartanFont>
+              <SubTitle>{theme.name}</SubTitle>
+              {/* <InputBox
+                type="text"
+                // value={userName}
+                placeholder="username"
+                // onChange={handleChangeUserName}
+              /> */}
+              <LoginButton>Sign in</LoginButton>
+            </FormBox>
+            {/* <InfoBox>
+            <Avatar src={`https://github.com/${username}.png`} />
+            <img src="/frameGOW.png" width="100%" max-width="600px"></img>
+          </InfoBox> */}
+          </LoginBox>
+        </FrameLoginBox>
       </BackgroundVideo>
     </>
   );
@@ -75,7 +98,7 @@ export default function HomePage() {
           }}
         >
 
-          <Box
+          <Box =========================
             as="form"
             onSubmit={function (event) {
               event.preventDefault();
@@ -92,7 +115,7 @@ export default function HomePage() {
             }}
           >
             <Title>Welcome back, Spartan!</Title>
-            <Text
+            <Text=============
               variant="body3"
               styleSheet={{
                 marginBottom: '32px',
@@ -100,8 +123,8 @@ export default function HomePage() {
               }}
             >
               {theme.name}
-            </Text>
-            <TextField
+            </Text=============>
+            <TextField=====================
               value={username}
               onChange={function (event) {
                 const value = event.target.value;
@@ -130,7 +153,7 @@ export default function HomePage() {
             />
           </Box>
 
-          <Box
+          <Box====================
             styleSheet={{
               display: 'flex',
               flexDirection: 'column',
@@ -163,7 +186,7 @@ export default function HomePage() {
             >
               {username}
             </Text>
-          </Box>
+          </Box=>
         </Box>
       </Box>
     </>
