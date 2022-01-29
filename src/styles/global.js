@@ -7,6 +7,7 @@ export default createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     list-style: none;
+
   }
 
   body {
@@ -19,6 +20,7 @@ export default createGlobalStyle`
 
   html, body, #__next {
         min-height: 100%;
+        min-width: 220px;
         display: flex;
         flex: 1;
       /* App fit Height */
