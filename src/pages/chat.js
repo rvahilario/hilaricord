@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { supabase } from '../client';
+// import { supabase } from '../client';
 import { useRouter } from 'next/router';
 
 import { Box, Text, TextField, Image, Button } from '@skynexui/components';
