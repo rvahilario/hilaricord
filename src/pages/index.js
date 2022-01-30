@@ -13,20 +13,20 @@ import { LoginButton } from '../components/button/LoginButton';
 import { FaGoogle, FaGithub } from 'react-icons/fa';
 
 export default function HomePage() {
-  const router = useRouter();
-  const { user, error, isLoading } = useUser();
-
-  if (isLoading) return <BackgroundVideo />;
-  if (error) return <BackgroundVideo>{error.message}</BackgroundVideo>;
-
   const handleLogin = () => router.push('/api/auth/login');
   const handleAfterLogin = () => router.push('/chat');
+
+  const router = useRouter();
+  const { user, error, isLoading } = useUser();
 
   useEffect(() => {
     if (user) {
       handleAfterLogin();
     }
   }, [user]);
+
+  if (isLoading) return <BackgroundVideo />;
+  if (error) return <BackgroundVideo>{error.message}</BackgroundVideo>;
 
   return !user ? (
     <BackgroundVideo>
