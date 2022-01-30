@@ -8,20 +8,19 @@ import theme from '../styles/themes/spartan';
 
 // Key made public only for study purpose
 
-export default function ChatPage() {
+export default function ChatPage({ user }) {
   // const [message, setMessage] = React.useState('');
   // const [listMessages, setListMessages] = React.useState([]);
   // // const [user, setUser] = useState(null);
 
   const router = useRouter();
-  const { user, error, isLoading } = useUser();
 
+  // const { user, error, isLoading } = useUser();
   // async function checkUser() {
   //   const user = supabase.auth.user();
   //   // console.log('User: ', user.user_metadata);
   //   setUser(user);
   // }
-
   // useEffect(() => {
   //   supabase
   //     .from('hilaricord_messages')
@@ -31,18 +30,15 @@ export default function ChatPage() {
   //       setListMessages(data.reverse());
   //     });
   // }, []);
-
   // function handleNewMessage(newMessage) {
   //   const message = {
   //     // id: listMessages.length + 1,
   //     de: 'suyhil',
   //     texto: newMessage,
   //   };
-
   //   setListMessages([message, ...listMessages]);
   //   setMessage('');
   // }
-
   // async function signOut() {
   //   await supabase.auth.signOut();
   //   setUser(null);
@@ -52,21 +48,21 @@ export default function ChatPage() {
     <div>
       <h1>Protected Page</h1>
 
-      {isLoading && <p>Loading profile...</p>}
+      {/* {isLoading && <p>Loading profile...</p>} */}
 
-      {error && (
+      {/* {error && (
         <>
           <h4>Error</h4>
           <pre>{error.message}</pre>
         </>
-      )}
+      )} */}
 
-      {user && (
-        <>
-          <h4>Profile</h4>
-          <pre>{JSON.stringify(user, null, 2)}</pre>
-        </>
-      )}
+      <>
+        <h4>Profile</h4>
+        <div>{user.name}</div>
+        <pre>{JSON.stringify(user, null, 2)}</pre>
+      </>
+
       <button onClick={() => router.push('/api/auth/logout')}>Sign Out</button>
     </div>
   );

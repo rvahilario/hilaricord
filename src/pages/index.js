@@ -16,58 +16,43 @@ export default function HomePage() {
   const router = useRouter();
   const { user, error, isLoading } = useUser();
 
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>{error.message}</div>;
+  if (isLoading) return <BackgroundVideo />;
+  if (error) return <BackgroundVideo>{error.message}</BackgroundVideo>;
 
   const handleLogin = () => router.push('/api/auth/login');
+  const handleAfterLogin = () => router.push('/chat');
 
-  // return (
-  //   <div>
-  //     {user ? (
-  //       <p>
-  //         Welcome {user.name}! <img src={user.picture} />
-  //         <Link href="/api/auth/logout">
-  //           <a>Logout</a>
-  //         </Link>
-  //         {console.log(user)}
-  //       </p>
-  //     ) : (
-  //       <Link href="/api/auth/login">
-  //         <a>Login</a>
-  //       </Link>
-  //     )}
-  //   </div>
-  // );
+  useEffect(() => {
+    if (user) {
+      handleAfterLogin();
+    }
+  }, [user]);
 
-  return (
-    <div>
-      {!user ? (
-        <BackgroundVideo>
-          <FrameLoginBox>
-            <LoginBox>
-              <FormBox>
-                <SpartanFont>
-                  <li>Hello</li>
-                  <li>Spartan!</li>
-                </SpartanFont>
-                <SubTitle>{theme.name}</SubTitle>
+  return !user ? (
+    <BackgroundVideo>
+      <FrameLoginBox>
+        <LoginBox>
+          <FormBox>
+            <SpartanFont>
+              <li>Hello</li>
+              <li>Spartan!</li>
+            </SpartanFont>
+            <SubTitle>{theme.name}</SubTitle>
 
-                <h3>Login using your</h3>
-                <h4>
-                  <FaGithub /> Github
-                </h4>
-                <h4>
-                  <FaGoogle /> Google
-                </h4>
-              </FormBox>
+            <h3>Login using your</h3>
+            <h4>
+              <FaGithub /> Github
+            </h4>
+            <h4>
+              <FaGoogle /> Google
+            </h4>
+          </FormBox>
 
-              <LoginButton onClick={handleLogin}>Sign in</LoginButton>
-            </LoginBox>
-          </FrameLoginBox>
-        </BackgroundVideo>
-      ) : (
-        router.push('/chat')
-      )}
-    </div>
+          <LoginButton onClick={handleLogin}>Sign in</LoginButton>
+        </LoginBox>
+      </FrameLoginBox>
+    </BackgroundVideo>
+  ) : (
+    ''
   );
 }
