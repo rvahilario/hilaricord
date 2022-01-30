@@ -7,6 +7,7 @@ import { Box, Text, TextField, Image, Button } from '@skynexui/components';
 import theme from '../styles/themes/spartan';
 import BackgroundStatic from '../components/background/BackgroundStatic';
 import MessageContainer from '../components/boxs/MessageContainer';
+import Header from '../components/header/Header';
 
 export default function ChatPage({ user }) {
   const [message, setMessage] = React.useState('');
@@ -38,6 +39,7 @@ export default function ChatPage({ user }) {
   return (
     <BackgroundStatic>
       <MessageContainer>
+        <Header />
       </MessageContainer>
     </BackgroundStatic>
 
@@ -134,29 +136,29 @@ export default function ChatPage({ user }) {
   );
 }
 
-function Header() {
-  return (
-    <>
-      <Box
-        styleSheet={{
-          width: '100%',
-          marginBottom: '16px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-        }}
-      >
-        <Text variant="heading5">Chat</Text>
-        <Button
-          variant="tertiary"
-          colorVariant="neutral"
-          label="Logout"
-          href="/"
-        />
-      </Box>
-    </>
-  );
-}
+// function Header() {
+//   return (
+//     <>
+//       <Box
+//         styleSheet={{
+//           width: '100%',
+//           marginBottom: '16px',
+//           display: 'flex',
+//           alignItems: 'center',
+//           justifyContent: 'space-between',
+//         }}
+//       >
+//         <Text variant="heading5">Chat</Text>
+//         <Button
+//           variant="tertiary"
+//           colorVariant="neutral"
+//           label="Logout"
+//           href="/"
+//         />
+//       </Box>
+//     </>
+//   );
+// }
 
 function MessagesList(props) {
   return (
