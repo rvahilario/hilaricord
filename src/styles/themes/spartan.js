@@ -29,8 +29,9 @@ export default {
   },
 
   background: {
-    loginVideo: '/bg_video.mp4',
-    chat: 'https://raw.githubusercontent.com/rvahilario/assets/main/hilaricord/images/old-kratos.jpg',
+    video: '/bg_video.mp4',
+    static:
+      'https://raw.githubusercontent.com/rvahilario/assets/main/hilaricord/images/old-kratos.jpg',
   },
 
   fonts: 'godOfWar',

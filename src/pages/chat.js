@@ -5,6 +5,7 @@ import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 
 import { Box, Text, TextField, Image, Button } from '@skynexui/components';
 import theme from '../styles/themes/spartan';
+import BackgroundStatic from '../components/background/BackgroundStatic';
 
 export default function ChatPage({ user }) {
   const [message, setMessage] = React.useState('');
@@ -34,96 +35,98 @@ export default function ChatPage({ user }) {
   }
 
   return (
-    <>
-      <div>
-        <h4>Profile</h4>
-        <div>{user.name}</div>
-        <pre>{JSON.stringify(user, null, 2)}</pre>
-        {console.log(typeof user.picture)}
+    <BackgroundStatic>chat page</BackgroundStatic>
 
-        <button onClick={() => router.push('/api/auth/logout')}>
-          Sign Out
-        </button>
-      </div>
+    // <>
+    //   {/* <div>
+    //     <h4>Profile</h4>
+    //     <div>{user.name}</div>
+    //     <pre>{JSON.stringify(user, null, 2)}</pre>
+    //     {console.log(typeof user.picture)}
 
-      <Box
-        styleSheet={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundColor: theme.colors.primary[500],
-          backgroundImage: `url(${theme.background.chat})`,
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
-          backgroundBlendMode: 'multiply',
-          color: theme.colors.neutrals[50],
-        }}
-      >
-        <Box
-          styleSheet={{
-            display: 'flex',
-            flexDirection: 'column',
-            flex: 1,
-            boxShadow: '0 2px 10px 0 rgb(0 0 0 / 20%)',
-            borderRadius: '5px',
-            backgroundColor: theme.colors.neutrals[700],
-            height: '100%',
-            maxWidth: '80vw',
-            maxHeight: '80vh',
-            padding: '32px',
-          }}
-        >
-          <Header />
-          <Box
-            styleSheet={{
-              position: 'relative',
-              display: 'flex',
-              flex: 1,
-              height: '90%',
-              backgroundColor: theme.colors.neutrals[600],
-              flexDirection: 'column',
-              borderRadius: '5px',
-              padding: '16px',
-            }}
-          >
-            <MessagesList listMessages={listMessages} />
-            <Box
-              as="form"
-              styleSheet={{
-                display: 'flex',
-                alignItems: 'center',
-              }}
-            >
-              <TextField
-                value={message}
-                onChange={(event) => {
-                  const value = event.target.value;
-                  setMessage(value);
-                }}
-                onKeyPress={(event) => {
-                  if (event.key === 'Enter') {
-                    event.preventDefault();
-                    handleNewMessage(message);
-                  }
-                }}
-                placeholder="Insert your message here..."
-                type="textarea"
-                styleSheet={{
-                  width: '100%',
-                  border: '0',
-                  resize: 'none',
-                  borderRadius: '5px',
-                  padding: '6px 8px',
-                  backgroundColor: theme.colors.neutrals[800],
-                  marginRight: '12px',
-                  color: theme.colors.neutrals[200],
-                }}
-              />
-            </Box>
-          </Box>
-        </Box>
-      </Box>
-    </>
+    //     <button onClick={() => router.push('/api/auth/logout')}>
+    //       Sign Out
+    //     </button>
+    //   </div> */}
+
+    //   <Box
+    //     styleSheet={{
+    //       display: 'flex',
+    //       alignItems: 'center',
+    //       justifyContent: 'center',
+    //       backgroundColor: theme.colors.primary._500,
+    //       backgroundImage: `url(${theme.background.chat})`,
+    //       backgroundRepeat: 'no-repeat',
+    //       backgroundSize: 'cover',
+    //       backgroundBlendMode: 'multiply',
+    //       color: theme.colors.neutrals._50,
+    //     }}
+    //   >
+    //     <Box
+    //       styleSheet={{
+    //         display: 'flex',
+    //         flexDirection: 'column',
+    //         flex: 1,
+    //         boxShadow: '0 2px 10px 0 rgb(0 0 0 / 20%)',
+    //         borderRadius: '5px',
+    //         backgroundColor: theme.colors.neutrals._700,
+    //         height: '100%',
+    //         maxWidth: '80vw',
+    //         maxHeight: '80vh',
+    //         padding: '32px',
+    //       }}
+    //     >
+    //       {/* <Header /> */}
+    //       <Box
+    //         styleSheet={{
+    //           position: 'relative',
+    //           display: 'flex',
+    //           flex: 1,
+    //           height: '90%',
+    //           backgroundColor: theme.colors.neutrals._600,
+    //           flexDirection: 'column',
+    //           borderRadius: '5px',
+    //           padding: '16px',
+    //         }}
+    //       >
+    //         {/* <MessagesList listMessages={listMessages} /> */}
+    //         <Box
+    //           as="form"
+    //           styleSheet={{
+    //             display: 'flex',
+    //             alignItems: 'center',
+    //           }}
+    //         >
+    //           <TextField
+    //             value={message}
+    //             onChange={(event) => {
+    //               const value = event.target.value;
+    //               setMessage(value);
+    //             }}
+    //             onKeyPress={(event) => {
+    //               if (event.key === 'Enter') {
+    //                 event.preventDefault();
+    //                 handleNewMessage(message);
+    //               }
+    //             }}
+    //             placeholder="Insert your message here..."
+    //             type="textarea"
+    //             styleSheet={{
+    //               width: '100%',
+    //               border: '0',
+    //               resize: 'none',
+    //               borderRadius: '5px',
+    //               padding: '6px 8px',
+    //               backgroundColor: theme.colors.neutrals._800,
+    //               marginRight: '12px',
+    //               color: theme.colors.neutrals._200,
+    //             }}
+    //           />
+    //         </Box>
+    //       </Box>
+    //     </Box>
+    //   </Box>
+    // </>
   );
 }
 
@@ -160,7 +163,7 @@ function MessagesList(props) {
         display: 'flex',
         flexDirection: 'column-reverse',
         flex: 1,
-        color: theme.colors.neutrals[50],
+        color: theme.colors.neutrals._50,
         marginBottom: '16px',
       }}
     >
@@ -175,7 +178,7 @@ function MessagesList(props) {
               padding: '6px',
               marginBottom: '12px',
               hover: {
-                backgroundColor: theme.colors.neutrals[700],
+                backgroundColor: theme.colors.neutrals._700,
               },
             }}
           >
@@ -199,7 +202,7 @@ function MessagesList(props) {
                 styleSheet={{
                   fontSize: '10px',
                   marginLeft: '8px',
-                  color: theme.colors.neutrals[300],
+                  color: theme.colors.neutrals._300,
                 }}
                 tag="span"
               >
@@ -214,4 +217,4 @@ function MessagesList(props) {
   );
 }
 
-export const getServerSideProps = withPageAuthRequired();
+// export const getServerSideProps = withPageAuthRequired();
