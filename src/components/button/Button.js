@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const LoginButton = styled.button`
+export const Button = styled.button`
   background-color: ${({ theme }) => theme.colors.primary._600};
   /* max-width: 100%; */
   width: 50%;
@@ -10,6 +10,8 @@ export const LoginButton = styled.button`
   margin-top: 10px;
   margin-left: 9%;
   transition: background-color 0.5s ease;
+  font-weight: bold;
+  font-size: 100%;
 
   & :hover {
     cursor: pointer;

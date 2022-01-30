@@ -9,7 +9,7 @@ import LoginBox from '../components/boxs/LoginBox';
 import FrameLoginBox from '../components/boxs/FrameLoginBox';
 import FormBox from '../components/boxs/FormBox';
 import SubTitle from '../components/typograph/SubTitle';
-import { LoginButton } from '../components/button/LoginButton';
+import { Button } from '../components/button/Button';
 import { FaGoogle, FaGithub } from 'react-icons/fa';
 
 export default function HomePage() {
@@ -48,7 +48,7 @@ export default function HomePage() {
             </h4>
           </FormBox>
 
-          <LoginButton onClick={handleLogin}>Sign in</LoginButton>
+          <Button onClick={handleLogin}>Sign in</Button>
         </LoginBox>
       </FrameLoginBox>
     </BackgroundVideo>
