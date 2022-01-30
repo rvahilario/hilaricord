@@ -39,6 +39,7 @@ const VideoContainer = styled.div`
     position: fixed;
     z-index: -10;
     overflow: hidden;
+    object-position: right;
   }
 `;
 
