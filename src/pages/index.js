@@ -3,7 +3,7 @@ import { useUser } from '@auth0/nextjs-auth0';
 import { useRouter } from 'next/router';
 
 import theme from '../styles/themes/spartan';
-import BackgroundVideo from '../components/backgroundVideo/BackgroundVideo';
+import BackgroundVideo from '../components/background/BackgroundVideo';
 import SpartanFont from '../components/typograph/SpartanFont';
 import LoginBox from '../components/boxs/LoginBox';
 import FrameLoginBox from '../components/boxs/FrameLoginBox';
