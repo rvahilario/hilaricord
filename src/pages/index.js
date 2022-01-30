@@ -13,12 +13,13 @@ import { LoginButton } from '../components/button/LoginButton';
 import { FaGoogle, FaGithub } from 'react-icons/fa';
 
 export default function HomePage() {
+  const router = useRouter();
   const { user, error, isLoading } = useUser();
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>{error.message}</div>;
 
-  const router = useRouter();
+  const handleLogin = () => router.push('/api/auth/login');
 
   // return (
   //   <div>
@@ -40,9 +41,7 @@ export default function HomePage() {
 
   return (
     <div>
-      {user ? (
-        router.push('/chat')
-      ) : (
+      {!user ? (
         <BackgroundVideo>
           <FrameLoginBox>
             <LoginBox>
@@ -62,12 +61,12 @@ export default function HomePage() {
                 </h4>
               </FormBox>
 
-              <LoginButton onClick={() => router.push('/api/auth/login')}>
-                Sign in
-              </LoginButton>
+              <LoginButton onClick={handleLogin}>Sign in</LoginButton>
             </LoginBox>
           </FrameLoginBox>
         </BackgroundVideo>
+      ) : (
+        router.push('/chat')
       )}
     </div>
   );
