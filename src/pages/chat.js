@@ -165,10 +165,10 @@ function MessagesList(props) {
       }}
     >
       {console.log(props)}
-      {props.listMessages.map((actualMessage) => {
+      {props.listMessages.map((message) => {
         return (
           <Text
-            key={actualMessage.id}
+            key={message.id}
             tag="li"
             styleSheet={{
               borderRadius: '5px',
@@ -192,9 +192,9 @@ function MessagesList(props) {
                   display: 'inline-block',
                   marginRight: '8px',
                 }}
-                src={actualMessage.picture}
+                src={message.picture}
               />
-              <Text tag="strong">{actualMessage.sender}</Text>
+              <Text tag="strong">{message.sender}</Text>
               <Text
                 styleSheet={{
                   fontSize: '10px',
@@ -206,7 +206,7 @@ function MessagesList(props) {
                 {new Date().toLocaleDateString()}
               </Text>
             </Box>
-            {actualMessage.text_message}
+            {message.text_message}
           </Text>
         );
       })}
