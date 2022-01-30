@@ -50,7 +50,7 @@ export default function ChatPage() {
     <div>
       <h1>Hello, </h1>
       {/* <img src={} width="200px" /> */}
-      <button /*onClick={signOut}*/>Sign Out</button>
+      <button onClick={() => router.push('/api/auth/logout')}>Sign Out</button>
     </div>
   );
 
