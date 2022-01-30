@@ -6,6 +6,7 @@ import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 import { Box, Text, TextField, Image, Button } from '@skynexui/components';
 import theme from '../styles/themes/spartan';
 import BackgroundStatic from '../components/background/BackgroundStatic';
+import MessageContainer from '../components/boxs/MessageContainer';
 
 export default function ChatPage({ user }) {
   const [message, setMessage] = React.useState('');
@@ -35,7 +36,10 @@ export default function ChatPage({ user }) {
   }
 
   return (
-    <BackgroundStatic>chat page</BackgroundStatic>
+    <BackgroundStatic>
+      <MessageContainer>
+      </MessageContainer>
+    </BackgroundStatic>
 
     // <>
     //   {/* <div>
