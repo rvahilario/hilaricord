@@ -28,15 +28,15 @@ const Container = styled.div`
   justify-content: center;
   width: 80%;
   height: 81%;
-  margin-top: 8%;
-  margin-left: 1%;
+  margin-top: 10%;
+  margin-left: 3%;
   border-radius: 10000px;
   background: radial-gradient(
     circle,
     rgba(0, 0, 0, 0.7) 53%,
     rgba(238, 130, 238, 0) 67%
   );
-  z-index: -1;
+  z-index: -2;
 `;
 
 const Frame = styled.div`
@@ -69,7 +69,7 @@ const Frame = styled.div`
     min-height: 220px;
     min-width: 220px;
     object-fit: fill;
-    /* z-index: 10; */
+    z-index: -1;
   }
 `;
 

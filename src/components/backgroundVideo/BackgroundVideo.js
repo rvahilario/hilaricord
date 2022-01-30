@@ -24,11 +24,12 @@ const VideoContainer = styled.div`
   height: 100%;
   min-width: 220px;
   object-fit: contain;
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
+  /* box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4); */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
 
   & .video {
     object-fit: cover;
@@ -36,7 +37,7 @@ const VideoContainer = styled.div`
     height: 100%;
     min-width: 220px;
     position: fixed;
-    z-index: -1;
+    z-index: -10;
     overflow: hidden;
   }
 `;

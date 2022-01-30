@@ -26,7 +26,7 @@ const Container = styled.form`
   height: 100%;
   max-height: 200px;
   margin-top: 15%;
-  margin-left: 2%;
+  margin-left: 10%;
   /* background-color: rgba(255, 0, 0, 0.5); */
 `;
 

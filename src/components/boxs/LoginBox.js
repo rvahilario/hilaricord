@@ -24,6 +24,7 @@ function LoginBox(props) {
 
 const Container = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   position: absolute;
   justify-content: center;
