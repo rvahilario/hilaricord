@@ -48,4 +48,5 @@ const DateContainer = styled.div`
   margin-left: auto;
   color: ${({ theme }) => theme.colors.neutrals._300};
   font-size: 12px;
+  margin-right: 10px;
 `;

@@ -36,6 +36,7 @@ const Text = styled.div`
   display: flex;
   margin-right: auto;
   flex-direction: row-reverse;
+  margin-right: 10px;
 `;
 
 const InfoContainer = styled.div`
