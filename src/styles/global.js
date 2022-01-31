@@ -9,7 +9,7 @@ export default createGlobalStyle`
     list-style: none;
   }
 
-  body,  {
+  body {
     background-color: ${theme.colors.neutrals._900};
     font-size: 14px;
     color: ${theme.colors.primary._50};
