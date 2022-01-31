@@ -23,18 +23,15 @@ function MessageContainer(props) {
 }
 
 const Container = styled.div`
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   flex: 1;
+  height: 90%;
+  /* background-color: theme.colors.neutrals._600; */
   flex-direction: column;
-  box-shadow: 0 2px 10px 0 rgb(0 0 0 / 20%);
-  border-radius: 20px;
-  height: 100%;
-  max-width: 80%;
-  max-height: 80%;
-  min-width: 250px;
-  padding: 32px;
-  /* border-radius: 10000px; */
-  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  padding: 16px;
+  /* overflow: scroll; */
 `;
 
 export default MessageContainer;
