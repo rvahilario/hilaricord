@@ -136,7 +136,7 @@ export default function ChatPage({ user }) {
   );
 }
 
-// function Header() {
+export const getServerSideProps = withPageAuthRequired();
 //   return (
 //     <>
 //       <Box
