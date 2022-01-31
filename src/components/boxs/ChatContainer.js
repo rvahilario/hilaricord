@@ -10,15 +10,12 @@ const Container = styled.div`
   flex-direction: column;
   box-shadow: 0 2px 10px 0 rgb(0 0 0 / 50%);
   border-radius: 20px;
-  height: 100%;
-  width: 90%;
-  /* max-width: 80%; */
+  height: 100vh;
+  width: 90vw;
   max-height: 80%;
-  min-width: 390px;
+  min-width: 360px;
   padding: 32px;
-  /* border-radius: 10000px; */
   background-color: rgba(0, 0, 0, 0.8);
-  position: fixed;
 `;
 
 export default ChatContainer;
