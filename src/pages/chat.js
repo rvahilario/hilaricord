@@ -28,6 +28,7 @@ export default function ChatPage({ user }) {
       sender: user.nickname,
       text_message: newMessage,
       picture: user.picture,
+      sub: user.sub,
     };
 
     supabase

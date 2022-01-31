@@ -7,7 +7,7 @@ function ListMessagesRender(props) {
   return (
     <Container>
       {props.listMessages.map((message) => {
-        return props.user.nickname === message.sender ? (
+        return props.user.sub === message.sub ? (
           <SelfContainer message={message} key={message.id}></SelfContainer>
         ) : (
           <SenderContainer message={message} key={message.id}></SenderContainer>
