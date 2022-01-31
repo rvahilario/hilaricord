@@ -1,10 +1,7 @@
 import styled from 'styled-components';
 
-import Avatar from '../avatars/Avatar';
-import Nickname from '../typograph/Nickname';
 import SelfContainer from '../boxs/SelfContainer';
 import SenderContainer from '../boxs/SenderContainer';
-import theme from '../../styles/themes/spartan';
 
 function ListMessagesRender(props) {
   return (
@@ -30,6 +27,7 @@ const Container = styled.div`
   overflow: auto;
   color: ${({ theme }) => theme.colors.neutrals._50};
   margin-bottom: 16px;
+  font-size: 16px;
 
   ::-webkit-scrollbar {
     border-radius: 10px;

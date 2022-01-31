@@ -33,12 +33,8 @@ export default function HomePage() {
       <FrameLoginBox>
         <LoginBox>
           <FormBox>
-            <SpartanFont>
-              <li>Hello</li>
-              <li>Spartan!</li>
-            </SpartanFont>
+            <SpartanFont>Welcome Spartan!</SpartanFont>
             <SubTitle>{theme.name}</SubTitle>
-
             <h3>Login using your</h3>
             <h4>
               <FaGithub /> Github
@@ -48,7 +44,9 @@ export default function HomePage() {
             </h4>
           </FormBox>
 
-          <Button onClick={handleLogin}>Sign in</Button>
+          <Button onClick={handleLogin}>
+            <span>Sign in</span>
+          </Button>
         </LoginBox>
       </FrameLoginBox>
     </BackgroundVideo>

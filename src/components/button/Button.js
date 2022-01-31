@@ -12,9 +12,10 @@ export const Button = styled.button`
   transition: background-color 0.5s ease;
   font-weight: bold;
   font-size: 100%;
+  /* color: ${({ theme }) => theme.colors.neutrals._50} */
 
   & :hover {
     cursor: pointer;
-    background-color: ${({ theme }) => theme.colors.primary._500};
+    background-color: ${({ theme }) => theme.colors.primary._800};
   }
 `;

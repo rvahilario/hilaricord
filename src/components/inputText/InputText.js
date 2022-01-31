@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const InputText = styled.textarea`
-  font-size: 16px;
+  font-size: 18px;
   color: ${({ theme }) => theme.colors.neutrals._100};
   background-color: ${({ theme }) => theme.colors.neutrals._700};
   width: 100%;

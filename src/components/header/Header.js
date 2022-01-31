@@ -10,7 +10,9 @@ function Header() {
   return (
     <Container>
       <Title>Chat</Title>
-      <Button onClick={handleLogout}>Logout</Button>
+      <Button onClick={handleLogout}>
+        <span>Logout</span>
+      </Button>
     </Container>
   );
 }

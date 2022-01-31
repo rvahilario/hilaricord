@@ -6,8 +6,7 @@ function Nickname(props) {
 
 const StyledFont = styled.div`
   color: ${({ theme }) => theme.colors.neutrals._50};
-  /* font-family: 'godOfWar'; */
-  font-size: 22px;
+  font-size: 20px;
   margin-right: 10px;
 `;
 

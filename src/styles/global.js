@@ -9,7 +9,7 @@ export default createGlobalStyle`
     list-style: none;
   }
 
-  body {
+  body,  {
     background-color: ${theme.colors.neutrals._900};
     font-size: 14px;
     color: ${theme.colors.primary._50};
@@ -23,10 +23,11 @@ export default createGlobalStyle`
         flex: 1;
       /* App fit Height */
     }
-
+  span {
+    color: ${theme.colors.primary._50};
+  }
   h3 {
     font-size: 14px;
-    /* margin-bottom: 6px; */
   }
 
   h4 {
