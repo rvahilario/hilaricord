@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
 import { Button } from '../button/Button';
+import { Text } from '@skynexui/components';
 
 function Header() {
   const router = useRouter();
@@ -8,6 +9,7 @@ function Header() {
 
   return (
     <Container>
+      <Title>Chat</Title>
       <Button onClick={handleLogout}>Logout</Button>
     </Container>
   );
@@ -19,6 +21,11 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+`;
+
+const Title = styled.text`
+  font-size: 20px;
+  font-weight: bold;
 `;
 
 {
