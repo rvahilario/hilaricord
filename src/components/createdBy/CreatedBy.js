@@ -9,10 +9,13 @@ function CreatedBy() {
         Developed by <li>Renan Hilário</li>
       </h2>
       <li>
-        <a href={'https://www.linkedin.com/in/renan-hilario/'}>
+        <a
+          href={'https://www.linkedin.com/in/renan-hilario/'}
+          target={'_blank'}
+        >
           <FaLinkedin />
         </a>
-        <a href={'https://github.com/rvahilario'}>
+        <a href={'https://github.com/rvahilario'} target={'_blank'}>
           <FaGithub />
         </a>
       </li>
