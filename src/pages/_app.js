@@ -13,6 +13,9 @@ import theme from '../styles/themes/spartan';
 export default function CustomApp({ Component, pageProps }) {
   return (
     <UserProvider>
+      <Head>
+        <link rel="shortcut icon" href="/favicon.ico" />
+      </Head>
       <GlobalStyle />
       <FontStyles />
       <ThemeProvider theme={theme}>
