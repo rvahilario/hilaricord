@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-// import theme from './themes/spartan';
 
 const BackgroundStatic = (props) => {
   const imageBackground = '/kratos_atreus.jpg';
-  // ({ theme }) => theme.background.static;
+
   return (
     <ImageContainer>
       <img
@@ -20,9 +19,9 @@ const BackgroundStatic = (props) => {
 };
 
 const ImageContainer = styled.div`
-  height: 100%;
+  height: 100vh;
   min-width: 220px;
-  object-fit: contain;
+  /* object-fit: contain; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,7 +31,7 @@ const ImageContainer = styled.div`
   & .image {
     object-fit: cover;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     min-width: 220px;
     object-position: 40%;
     position: fixed;
