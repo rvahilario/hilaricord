@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import theme from '../styles/themes/spartan';
 import BackgroundVideo from '../components/background/BackgroundVideo';
 import BackgroundStatic from '../components/background/BackgroundStatic';
+import CreatedBy from '../components/createdBy/CreatedBy';
 import SpartanFont from '../components/typograph/SpartanFont';
 import LoginBox from '../components/boxs/LoginBox';
 import FrameLoginBox from '../components/boxs/FrameLoginBox';
@@ -50,6 +51,7 @@ export default function HomePage() {
           </Button>
         </LoginBox>
       </FrameLoginBox>
+      <CreatedBy />
     </BackgroundVideo>
   ) : (
     ''

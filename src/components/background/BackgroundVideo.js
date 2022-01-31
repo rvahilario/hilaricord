@@ -23,6 +23,7 @@ const BackgroundVideo = (props) => {
 const VideoContainer = styled.div`
   height: 100vh;
   min-width: 220px;
+  width: 100%;
   /* object-fit: cover; */
   /* box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4); */
   display: flex;
