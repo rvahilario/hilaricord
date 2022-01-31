@@ -18,19 +18,19 @@ export default createGlobalStyle`
 
   html, body, #__next {
         min-height: 100%;
-        min-width: 220px;
+        min-width: 380px;
         display: flex;
         flex: 1;
       /* App fit Height */
     }
 
   h3 {
-    font-size: 16px;
+    font-size: 14px;
     /* margin-bottom: 6px; */
   }
 
   h4 {
-    font-size: 13px;
+    font-size: 12px;
     margin-top: 6px;
   }
 

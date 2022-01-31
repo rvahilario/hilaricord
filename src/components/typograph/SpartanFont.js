@@ -7,8 +7,8 @@ function SpartanFont(props) {
 const StyledFont = styled.div`
   color: ${({ theme }) => theme.colors.neutrals._50};
   font-family: 'godOfWar';
-  font-size: 32px;
-  font-weight: 400;
+  font-size: 26px;
+  width: 99%;
 `;
 
 export default SpartanFont;
