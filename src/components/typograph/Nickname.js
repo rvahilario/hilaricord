@@ -5,8 +5,8 @@ function Nickname(props) {
 }
 
 const StyledFont = styled.div`
-  color: ${({ theme }) => theme.colors.neutrals._50};
-  font-size: 20px;
+  color: ${({ theme }) => theme.colors.neutrals._100};
+  font-size: 1.2rem;
   margin-right: 10px;
 `;
 

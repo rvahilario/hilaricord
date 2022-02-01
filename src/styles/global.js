@@ -13,7 +13,7 @@ export default createGlobalStyle`
     background-color: ${theme.colors.neutrals._900};
     font-size: 14px;
     color: ${theme.colors.primary._50};
-    font-family: 'Open Sans', sans-serif;
+    font-family: Roboto, sans-serif;
   }
 
   html, body, #__next {

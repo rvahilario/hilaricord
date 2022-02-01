@@ -25,9 +25,9 @@ const Container = styled.div`
   flex: 1;
   flex-direction: column-reverse;
   overflow: auto;
-  color: ${({ theme }) => theme.colors.neutrals._50};
+  color: ${({ theme }) => theme.colors.neutrals._100};
   margin-bottom: 16px;
-  font-size: 16px;
+  font-size: 0.8rem;
 
   ::-webkit-scrollbar {
     border-radius: 10px;

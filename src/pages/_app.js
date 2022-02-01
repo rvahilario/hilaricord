@@ -19,6 +19,10 @@ export default function CustomApp({ Component, pageProps }) {
       <ThemeProvider theme={theme}>
         <Head>
           <link rel="shortcut icon" href="/favicon.ico" />
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+          />
         </Head>
         <Component {...pageProps} />
       </ThemeProvider>
