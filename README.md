@@ -6,7 +6,7 @@
   <!-- <a href="https://hilaricord.vercel.app/">Here is a live demo of project,<br/> check it out!</a> -->
 </div>
 
-<h1 align="center"><img src="https://github.com/rvahilario/hilaricord/blob/main/public/frameGOWlogo.png" /> Hilaricord <img src="https://github.com/rvahilario/hilaricord/blob/main/public/frameGOWlogo.png" /></h1>
+<h1 align="center"><img height="30px" src="https://github.com/rvahilario/hilaricord/blob/main/public/frameGOWlogo.png" /> Hilaricord <img height="30px" src="https://github.com/rvahilario/hilaricord/blob/main/public/frameGOWlogo.png" /></h1>
 
 <p align="center">
   <!-- <img alt="Github top language" src="https://img.shields.io/github/languages/top/rvahilario/hilaricord?color=56BEB8"> -->
