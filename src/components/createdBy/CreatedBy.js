@@ -1,22 +1,29 @@
 import styled from 'styled-components';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
-import { getServerSideProps } from '../../pages/chat';
+import { FaLinkedin, FaGithub, FaGithubSquare } from 'react-icons/fa';
+import { ImLinkedin } from 'react-icons/im';
 
 function CreatedBy() {
   return (
     <Container>
       <h2>
-        Developed by <li>Renan Hilário</li>
+        Developed by <br />
+        Renan Hilário
       </h2>
       <li>
         <a
           href={'https://www.linkedin.com/in/renan-hilario/'}
           target={'_blank'}
         >
-          <FaLinkedin />
+          <div>
+            {/* <ImLinkedin /> */}
+            <FaLinkedin />
+          </div>
         </a>
         <a href={'https://github.com/rvahilario'} target={'_blank'}>
-          <FaGithub />
+          <div>
+            {/* <FaGithub /> */}
+            <FaGithubSquare />
+          </div>
         </a>
       </li>
     </Container>
@@ -30,25 +37,29 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: ${({ theme }) => theme.colors.neutrals._300};
-  margin-left: 5%;
+  color: ${({ theme }) => theme.colors.neutrals._200};
+  margin-left: 3%;
 
   h2 {
     font-size: 0.8rem;
   }
 
-  a {
-    color: ${({ theme }) => theme.colors.primary._700};
-    margin: 0 0.5rem;
-    font-size: 2rem;
-    transition: 0.3s;
-
-    :hover {
-      color: ${({ theme }) => theme.colors.primary._900};
-    }
-  }
-
   li {
-    margin-top: 0.2rem;
+    /* place-items: center; */
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: row;
+
+    a {
+      color: ${({ theme }) => theme.colors.primary._200};
+      /* color: royalblue; */
+      margin: 0.5rem;
+      font-size: 2rem;
+      transition: 0.3s;
+
+      :hover {
+        color: ${({ theme }) => theme.colors.primary._900};
+      }
+    }
   }
 `;

@@ -14,7 +14,7 @@ const Container = styled.div`
   height: 75%;
   min-width: 380px;
   border-radius: 10000px;
-  margin: 10px 20px 0 0;
+  margin: 3% 6% 0% 0%;
 `;
 
 export default LoginBox;

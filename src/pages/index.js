@@ -32,26 +32,28 @@ export default function HomePage() {
 
   return !user ? (
     <BackgroundVideo>
-      <FrameLoginBox>
-        <LoginBox>
-          <FormBox>
-            <SpartanFont>Welcome Spartan!</SpartanFont>
-            <SubTitle>{theme.name}</SubTitle>
-            <h3>Login using your</h3>
-            <h4>
-              <FaGithub /> Github
-            </h4>
-            <h4>
-              <FaGoogle /> Google
-            </h4>
-          </FormBox>
+      <div>
+        <FrameLoginBox>
+          <LoginBox>
+            <FormBox>
+              <SpartanFont>Welcome Spartan!</SpartanFont>
+              <SubTitle>{theme.name}</SubTitle>
+              <h3>Login using your</h3>
+              <h4>
+                <FaGithub /> Github
+              </h4>
+              <h4>
+                <FaGoogle /> Google
+              </h4>
+            </FormBox>
 
-          <Button onClick={handleLogin}>
-            <span>Sign in</span>
-          </Button>
-        </LoginBox>
-      </FrameLoginBox>
-      <CreatedBy />
+            <Button onClick={handleLogin}>
+              <span>Sign in</span>
+            </Button>
+          </LoginBox>
+        </FrameLoginBox>
+        <CreatedBy />
+      </div>
     </BackgroundVideo>
   ) : (
     ''
