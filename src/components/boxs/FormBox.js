@@ -2,18 +2,7 @@ import styled from 'styled-components';
 import { Box } from '@skynexui/components';
 
 function FormBox(props) {
-  return (
-    <Container>
-      {/* <Box
-        as="form"
-        styleSheet={{
-          width: { xs: '100%', sm: '50%' },
-        }}
-      > */}
-      {props.children}
-      {/* </Box> */}
-    </Container>
-  );
+  return <Container>{props.children}</Container>;
 }
 
 const Container = styled.form`

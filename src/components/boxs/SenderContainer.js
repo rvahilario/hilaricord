@@ -6,7 +6,6 @@ import Nickname from '../typograph/Nickname';
 function SenderContainer(props) {
   return (
     <Container>
-      {console.log(props)}
       <InfoContainer>
         <Avatar src={props.message.picture} />
         <Nickname>{props.message.sender}</Nickname>
