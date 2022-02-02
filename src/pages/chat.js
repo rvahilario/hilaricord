@@ -45,12 +45,31 @@ export default function ChatPage({ user }) {
     }
   };
 
+  const handleDeleteMessage = async (messageToDeleteId) => {
+    try {
+      await supabase
+        .from('hilaricord_messages')
+        .delete()
+        .eq('id', messageToDeleteId);
+
+      setListMessages(
+        listMessages.filter((message) => message.id != messageToDeleteId)
+      );
+    } catch (error) {
+      console.log('error', error);
+    }
+  };
+
   return (
     <BackgroundStatic>
       <ChatContainer>
         <Header />
         <MessageContainer>
-          <ListMessagesRender listMessages={listMessages} user={user} />
+          <ListMessagesRender
+            listMessages={listMessages}
+            user={user}
+            handleDeleteMessage={handleDeleteMessage}
+          />
           <InputBox>
             <InputText
               value={message}

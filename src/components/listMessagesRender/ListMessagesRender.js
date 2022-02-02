@@ -8,7 +8,11 @@ function ListMessagesRender(props) {
     <Container>
       {props.listMessages.map((message) => {
         return props.user.sub === message.sub ? (
-          <SelfContainer message={message} key={message.id}></SelfContainer>
+          <SelfContainer
+            message={message}
+            key={message.id}
+            handleDeleteMessage={props.handleDeleteMessage}
+          ></SelfContainer>
         ) : (
           <SenderContainer message={message} key={message.id}></SenderContainer>
         );
