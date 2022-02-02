@@ -21,7 +21,6 @@ const BackgroundStatic = (props) => {
 const ImageContainer = styled.div`
   height: 100vh;
   min-width: 220px;
-  /* object-fit: contain; */
   display: flex;
   flex-direction: column;
   justify-content: center;

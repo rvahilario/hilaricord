@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import { FaLinkedin, FaGithub, FaGithubSquare } from 'react-icons/fa';
-import { ImLinkedin } from 'react-icons/im';
+import { FaLinkedin, FaGithubSquare } from 'react-icons/fa';
 
 function CreatedBy() {
   return (
@@ -15,13 +14,11 @@ function CreatedBy() {
           target={'_blank'}
         >
           <div>
-            {/* <ImLinkedin /> */}
             <FaLinkedin />
           </div>
         </a>
         <a href={'https://github.com/rvahilario'} target={'_blank'}>
           <div>
-            {/* <FaGithub /> */}
             <FaGithubSquare />
           </div>
         </a>
@@ -45,14 +42,12 @@ const Container = styled.div`
   }
 
   li {
-    /* place-items: center; */
     margin-top: 0.5rem;
     display: flex;
     flex-direction: row;
 
     a {
       color: ${({ theme }) => theme.colors.primary._200};
-      /* color: royalblue; */
       margin: 0.5rem;
       font-size: 2rem;
       transition: 0.3s;

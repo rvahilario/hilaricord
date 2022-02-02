@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Text } from '@skynexui/components';
 
 function SubTitle(props) {
   return <Container>{props.children}</Container>;

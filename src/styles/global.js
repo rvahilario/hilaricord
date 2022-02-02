@@ -21,11 +21,12 @@ export default createGlobalStyle`
         min-width: 380px;
         display: flex;
         flex: 1;
-      /* App fit Height */
-    }
+  }
+
   span {
     color: ${theme.colors.primary._50};
   }
+
   h3 {
     font-size: 14px;
   }
@@ -42,6 +43,4 @@ export default createGlobalStyle`
   #__next > * {
     flex: 1;
   }
-
-  /* ./App fit Height */
 `;

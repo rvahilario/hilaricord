@@ -1,21 +1,10 @@
 import styled from 'styled-components';
-import { Box } from '@skynexui/components';
 
 function FrameLoginBox(props) {
   return (
     <Frame>
       <img src={'/frameGOW.png'}></img>
-      <Container>
-        {/* <Box
-        styleSheet={{
-          flexDirection: {
-            xs: 'column',
-            sm: 'row',
-          },
-        }}
-      > */}
-        {/* </Box> */}
-      </Container>
+      <Container />
       {props.children}
     </Frame>
   );
@@ -45,20 +34,11 @@ const Frame = styled.div`
   position: relative;
   justify-content: center;
   width: 100%;
-  /* height: 100%; */
   max-width: 600px;
   max-height: 600px;
   min-height: 220px;
   min-width: 220px;
-  /* height: 100%; */
   border-radius: 10000px;
-  /* padding: 32px; */
-  /* margin: 16px; */
-  /* box-shadow: 0 2px 10px 0 rgb(0 0 0 / 50%); */
-  /* background: rgba(102, 0, 0, 0.7); */
-  /* border-image:  ; */
-  /* url('/frameGOW.png'); */
-  /* z-index: ; */
 
   img {
     display: block;

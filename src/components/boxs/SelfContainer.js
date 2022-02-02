@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import supabase from '../../client';
 
 import Avatar from '../avatars/Avatar';
 import Nickname from '../typograph/Nickname';
