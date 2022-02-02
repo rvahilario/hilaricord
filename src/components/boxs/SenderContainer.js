@@ -5,9 +5,7 @@ import InfoContainer from './InfoContainer';
 function SenderContainer(props) {
 	return (
 		<Container>
-			<BoxInfoContainer>
-				<InfoContainer message={props.message} />
-			</BoxInfoContainer>
+			<BoxInfoContainer>{props.children}</BoxInfoContainer>
 			<Text>{props.message.text_message}</Text>
 		</Container>
 	);

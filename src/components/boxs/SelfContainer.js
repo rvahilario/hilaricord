@@ -6,9 +6,7 @@ import { RiDeleteBinLine } from 'react-icons/ri';
 function SelfContainer(props) {
 	return (
 		<Container>
-			<BoxInfoContainer>
-				<InfoContainer message={props.message} />
-			</BoxInfoContainer>
+			<BoxInfoContainer>{props.children}</BoxInfoContainer>
 			<TextContainer>
 				<Text>{props.message.text_message}</Text>
 				<ButtonTask onClick={() => props.handleDeleteMessage(props.message.id)}>
