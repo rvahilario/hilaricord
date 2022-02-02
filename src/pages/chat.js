@@ -23,7 +23,7 @@ export default function ChatPage({ user }) {
       });
   }, []);
 
-  function handleNewMessage(newMessage) {
+  const handleNewMessage = async (newMessage) => {
     const message = {
       sender: user.nickname,
       text_message: newMessage,
@@ -31,15 +31,19 @@ export default function ChatPage({ user }) {
       sub: user.sub,
     };
 
-    supabase
-      .from('hilaricord_messages')
-      .insert([message])
-      .then(({ data }) => {
-        setListMessages([data[0], ...listMessages]);
-      });
+    try {
+      await supabase
+        .from('hilaricord_messages')
+        .insert([message])
+        .then(({ data }) => {
+          setListMessages([data[0], ...listMessages]);
+        });
 
-    setMessage('');
-  }
+      setMessage('');
+    } catch (error) {
+      console.log('error', error);
+    }
+  };
 
   return (
     <BackgroundStatic>
