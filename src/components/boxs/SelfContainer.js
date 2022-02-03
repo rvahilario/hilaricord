@@ -56,7 +56,7 @@ const ButtonTask = styled.button`
 	color: rgba(0, 0, 0, 0);
 	border: none;
 	cursor: pointer;
-	font-size: 20px;
+	font-size: 1rem;
 	margin-right: 18px;
 	margin-left: 6px;
 	height: 15px;
