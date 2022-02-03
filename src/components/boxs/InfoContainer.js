@@ -29,6 +29,8 @@ const Container = styled.div`
 	justify-content: space-between;
 	display: flex;
 	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 3px;
 `;
 
 const StyledDiv = styled.div`

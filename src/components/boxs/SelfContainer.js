@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-import InfoContainer from './InfoContainer';
 import { RiDeleteBinLine } from 'react-icons/ri';
 
 function SelfContainer(props) {
@@ -20,13 +19,19 @@ function SelfContainer(props) {
 export default SelfContainer;
 
 const Container = styled.div`
-	border-radius: 10px;
-	padding: 6px;
-	margin-bottom: 12px;
+	border-radius: 5px;
 	transition: 0.3s;
 
 	& :hover {
 		background-color: ${({ theme }) => theme.colors.primary._600};
+
+		button {
+			color: ${({ theme }) => theme.colors.neutrals._500};
+
+			:hover {
+				color: ${({ theme }) => theme.colors.primary._50};
+			}
+		}
 	}
 `;
 
@@ -38,8 +43,8 @@ const Text = styled.div`
 `;
 
 const BoxInfoContainer = styled.div`
-	margin-bottom: 10px;
 	display: flex;
+	margin-left: 5px;
 
 	div {
 		flex-direction: row-reverse;
@@ -48,17 +53,13 @@ const BoxInfoContainer = styled.div`
 
 const ButtonTask = styled.button`
 	background: none;
+	color: rgba(0, 0, 0, 0);
 	border: none;
-	color: ${({ theme }) => theme.colors.neutrals._500};
 	cursor: pointer;
 	font-size: 20px;
 	margin-right: 18px;
 	margin-left: 6px;
-	height: 22px;
-
-	:hover {
-		color: ${({ theme }) => theme.colors.primary._50};
-	}
+	height: 15px;
 `;
 
 const TextContainer = styled.div`
@@ -66,4 +67,5 @@ const TextContainer = styled.div`
 	flex-direction: row-reverse;
 	justify-content: space-between;
 	align-items: center;
+	margin: 3px 0;
 `;
