@@ -40,6 +40,7 @@ const Text = styled.div`
 	margin-right: auto;
 	flex-direction: row-reverse;
 	margin-right: 10px;
+	word-break: break-word;
 `;
 
 const BoxInfoContainer = styled.div`
