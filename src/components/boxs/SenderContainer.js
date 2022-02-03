@@ -4,7 +4,7 @@ function SenderContainer(props) {
 	return (
 		<Container>
 			<BoxInfoContainer>{props.children}</BoxInfoContainer>
-			<Text>{props.message.text_message}</Text>
+			<TextContainer>{props.message.text_message}</TextContainer>
 		</Container>
 	);
 }
@@ -18,10 +18,11 @@ const Container = styled.div`
 	}
 `;
 
-const Text = styled.div`
+const TextContainer = styled.div`
 	display: flex;
 	flex-direction: row;
 	margin: 3px 5px;
+	word-break: break-word;
 `;
 
 const BoxInfoContainer = styled.div`

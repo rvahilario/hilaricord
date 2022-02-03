@@ -7,7 +7,7 @@ function SelfContainer(props) {
 		<Container>
 			<BoxInfoContainer>{props.children}</BoxInfoContainer>
 			<TextContainer>
-				<Text>{props.message.text_message}</Text>
+				<TextBox>{props.message.text_message}</TextBox>
 				<ButtonTask onClick={() => props.handleDeleteMessage(props.message.id)}>
 					<RiDeleteBinLine />
 				</ButtonTask>
@@ -35,7 +35,7 @@ const Container = styled.div`
 	}
 `;
 
-const Text = styled.div`
+const TextBox = styled.div`
 	display: flex;
 	margin-right: auto;
 	flex-direction: row-reverse;
