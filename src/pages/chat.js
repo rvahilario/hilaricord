@@ -9,6 +9,8 @@ import Header from '../components/header/Header';
 import ListMessagesRender from '../components/listMessagesRender/ListMessagesRender';
 import InputText from '../components/inputText/InputText';
 import InputBox from '../components/boxs/InputBox';
+import { Button } from '../components/button/Button';
+import { IoIosSend } from 'react-icons/io';
 
 export default function ChatPage({ user }) {
 	const [message, setMessage] = useState('');
@@ -89,6 +91,16 @@ export default function ChatPage({ user }) {
 								}
 							}}
 						/>
+						<Button
+							onClick={(event) => {
+								if (message.length > 0) {
+									event.preventDefault();
+									handleNewMessage(message);
+								}
+							}}
+						>
+							<IoIosSend />
+						</Button>
 					</InputBox>
 				</MessageContainer>
 			</ChatContainer>
