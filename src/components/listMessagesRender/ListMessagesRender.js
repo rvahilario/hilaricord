@@ -5,23 +5,33 @@ import SenderContainer from '../boxs/SenderContainer';
 import InfoContainer from '../boxs/InfoContainer';
 
 function ListMessagesRender(props) {
+	const lastIndex = props.listMessages.length - 1;
+
 	return (
 		<Container>
-			{props.listMessages.map((message) => {
-				// console.log(props);
+			{props.listMessages.map((message, index) => {
+				// ** Logic to group messages by user ** //
+				let showInfo = false;
+				if (index === lastIndex) {
+					showInfo = true;
+				} else {
+					const nextUserSub = props.listMessages[index + 1].sub;
+					if (message.sub !== nextUserSub) {
+						showInfo = true;
+					}
+				}
+
 				return props.user.sub === message.sub ? (
 					<SelfContainer
 						message={message}
 						key={message.id}
 						handleDeleteMessage={props.handleDeleteMessage}
 					>
-						{/* console.log(props) */}
-						{/* {console.log(props)} */}
-						<InfoContainer message={message} />
+						<InfoContainer message={message} showInfo={showInfo} />
 					</SelfContainer>
 				) : (
 					<SenderContainer message={message} key={message.id}>
-						<InfoContainer message={message} />
+						<InfoContainer message={message} showInfo={showInfo} />
 					</SenderContainer>
 				);
 			})}

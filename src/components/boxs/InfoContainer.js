@@ -4,7 +4,7 @@ import Avatar from '../avatars/Avatar';
 import Nickname from '../typograph/Nickname';
 
 function InfoContainer(props) {
-	return (
+	return props.showInfo === true ? (
 		<Container>
 			<StyledDiv>
 				<Avatar src={props.message.picture} />
@@ -14,6 +14,8 @@ function InfoContainer(props) {
 				{new Date(props.message.created_at).toLocaleDateString()}
 			</DateContainer>
 		</Container>
+	) : (
+		''
 	);
 }
 

@@ -60,6 +60,7 @@ export default function ChatPage({ user }) {
     }
   };
 
+	let showInfo = true;
   return (
     <BackgroundStatic>
       <ChatContainer>
@@ -69,6 +70,7 @@ export default function ChatPage({ user }) {
             listMessages={listMessages}
             user={user}
             handleDeleteMessage={handleDeleteMessage}
+						showInfo={showInfo}
           />
           <InputBox>
             <InputText
