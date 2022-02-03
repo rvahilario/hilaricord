@@ -21,7 +21,7 @@ export default function ChatPage({ user }) {
 			.then(({ data }) => {
 				setListMessages(data.reverse());
 			});
-	}, [listMessages]);
+	}, []);
 
 	const handleNewMessage = async (newMessage) => {
 		const message = {
