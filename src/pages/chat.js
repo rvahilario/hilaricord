@@ -65,7 +65,6 @@ export default function ChatPage({ user }) {
 	return (
 		<BackgroundStatic>
 			<ChatContainer>
-				{console.log(user)}
 				<Header />
 				<MessageContainer>
 					<ListMessagesRender
