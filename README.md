@@ -1,11 +1,14 @@
 <div align="center" id="top" width="400px">
 	
-	
-https://github.com/rvahilario/assets/blob/45b8b56b0d263c7004a0b4e8510e29ae84affd90/hilaricord/V%C3%ADdeo%20(0).mp4
+
+
+https://user-images.githubusercontent.com/54445268/152476983-7ca0ce03-dc01-4d91-8ce7-c58bddf49253.mp4
+
+
 
 &#xa0;
 
-  <!-- <a href="https://hilaricord.vercel.app/">Here is a live demo of project,<br/> check it out!</a> -->
+ <a href="https://hilaricord.vercel.app/">Here is a live demo of project,<br/> check it out!</a>
 </div>
 
 <h1 align="center"><img height="30px" src="https://github.com/rvahilario/hilaricord/blob/main/public/frameGOWlogo.png" /> Hilaricord <img height="30px" src="https://github.com/rvahilario/hilaricord/blob/main/public/frameGOWlogo.png" /></h1>
@@ -29,7 +32,7 @@ https://github.com/rvahilario/assets/blob/45b8b56b0d263c7004a0b4e8510e29ae84affd
 <!-- Status -->
 
 <h4 align="center">
-	🚧  Hilaricord 🚀 Under construction...  🚧
+  Hilaricord 🚀 First Version Released 
 </h4>
 
 <hr>
