@@ -21,7 +21,7 @@ const BackgroundVideo = (props) => {
 };
 
 const VideoContainer = styled.div`
-	height: 102vh;
+	height: 100vh;
 	min-width: 220px;
 	width: 100%;
 	display: flex;
@@ -33,7 +33,7 @@ const VideoContainer = styled.div`
 	& .video {
 		object-fit: cover;
 		width: 100%;
-		height: 102vh;
+		height: 100vh;
 		min-width: 220px;
 		position: fixed;
 		z-index: -10;

@@ -19,7 +19,7 @@ const BackgroundStatic = (props) => {
 };
 
 const ImageContainer = styled.div`
-	height: 102vh;
+	height: 100vh;
 	min-width: 220px;
 	display: flex;
 	flex-direction: column;
@@ -30,7 +30,7 @@ const ImageContainer = styled.div`
 	& .image {
 		object-fit: cover;
 		width: 100%;
-		height: 102vh;
+		height: 100vh;
 		min-width: 220px;
 		object-position: 40%;
 		position: fixed;
