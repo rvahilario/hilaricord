@@ -1,9 +1,14 @@
-<div align="center" id="top">
-  <!-- <img src="./.github/app.gif" alt="Hilaricord" /> -->
+<div align="center" id="top" width="400px">
+	
+
+
+https://user-images.githubusercontent.com/54445268/152476983-7ca0ce03-dc01-4d91-8ce7-c58bddf49253.mp4
+
+
 
 &#xa0;
 
-  <!-- <a href="https://hilaricord.vercel.app/">Here is a live demo of project,<br/> check it out!</a> -->
+ <a target="_blank" href="https://hilaricord.vercel.app/">Here is a live demo of project,<br/> check it out!</a>
 </div>
 
 <h1 align="center"><img height="30px" src="https://github.com/rvahilario/hilaricord/blob/main/public/frameGOWlogo.png" /> Hilaricord <img height="30px" src="https://github.com/rvahilario/hilaricord/blob/main/public/frameGOWlogo.png" /></h1>
@@ -27,7 +32,7 @@
 <!-- Status -->
 
 <h4 align="center">
-	🚧  Hilaricord 🚀 Under construction...  🚧
+  Hilaricord 🚀 First Version Released 
 </h4>
 
 <hr>
@@ -65,6 +70,9 @@ Here is the project originally prototyped by the folks at Alura and hosted on [F
 :heavy_check_mark: User Authentication;\
 :heavy_check_mark: Your messages rendering in right side follow the pattern in actual chats;\
 :heavy_check_mark: Wrong message, don"t panic! There is a delete button.;\
+:heavy_check_mark: Sequential messages from the same user are rendered in groups.;\
+:heavy_check_mark: Emoji button.;\
+:heavy_check_mark: Chat in real time.;\
 
 ## :rocket: Technologies
 
@@ -76,6 +84,7 @@ The following tools were used in this project:
 - [Supabase](https://supabase.com/)
 - [Styled-Components](https://styled-components.com/)
 - [React Icons](https://react-icons.github.io/react-icons/)
+- And others...
 
 ## :white_check_mark: Requirements
 
