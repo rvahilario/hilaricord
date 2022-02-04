@@ -69,10 +69,10 @@ Here is the project originally prototyped by the folks at Alura and hosted on [F
 
 :heavy_check_mark: User Authentication;\
 :heavy_check_mark: Your messages rendering in right side follow the pattern in actual chats;\
-:heavy_check_mark: Wrong message, don"t panic! There is a delete button.;\
-:heavy_check_mark: Sequential messages from the same user are rendered in groups.;\
-:heavy_check_mark: Emoji button.;\
-:heavy_check_mark: Chat in real time.;\
+:heavy_check_mark: Wrong message, don't panic! There is a delete button;\
+:heavy_check_mark: Sequential messages from the same user are rendered in groups;\
+:heavy_check_mark: Emoji button;\
+:heavy_check_mark: Chat in real time;
 
 ## :rocket: Technologies
 
