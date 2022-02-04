@@ -1,5 +1,7 @@
-<div align="center" id="top">
-  <!-- <img src="./.github/app.gif" alt="Hilaricord" /> -->
+<div align="center" id="top" width="400px">
+	
+	
+https://github.com/rvahilario/assets/blob/45b8b56b0d263c7004a0b4e8510e29ae84affd90/hilaricord/V%C3%ADdeo%20(0).mp4
 
 &#xa0;
 
@@ -65,6 +67,9 @@ Here is the project originally prototyped by the folks at Alura and hosted on [F
 :heavy_check_mark: User Authentication;\
 :heavy_check_mark: Your messages rendering in right side follow the pattern in actual chats;\
 :heavy_check_mark: Wrong message, don"t panic! There is a delete button.;\
+:heavy_check_mark: Sequential messages from the same user are rendered in groups.;\
+:heavy_check_mark: Emoji button.;\
+:heavy_check_mark: Chat in real time.;\
 
 ## :rocket: Technologies
 
@@ -76,6 +81,7 @@ The following tools were used in this project:
 - [Supabase](https://supabase.com/)
 - [Styled-Components](https://styled-components.com/)
 - [React Icons](https://react-icons.github.io/react-icons/)
+- And others...
 
 ## :white_check_mark: Requirements
 
