@@ -100,7 +100,7 @@ export default function ChatPage({ user }) {
 									left: '50px',
 								}}
 								showPreview={false}
-								native={true}
+								// native={true}
 								theme={'dark'}
 								showSkinTones={false}
 								useButton={false}
