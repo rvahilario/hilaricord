@@ -18,10 +18,11 @@ export default function ChatPage({ user }) {
 		supabase
 			.from('hilaricord_messages')
 			.select('*')
+			.order('created_at', { ascending: false })
 			.then(({ data }) => {
-				setListMessages(data.reverse());
+				setListMessages(data);
 			});
-	}, []);
+	}, [listMessages]);
 
 	const handleNewMessage = async (newMessage) => {
 		const message = {
