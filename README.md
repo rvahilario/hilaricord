@@ -8,7 +8,7 @@ https://user-images.githubusercontent.com/54445268/152476983-7ca0ce03-dc01-4d91-
 
 &#xa0;
 
- <a href="https://hilaricord.vercel.app/">Here is a live demo of project,<br/> check it out!</a>
+ <a href="https://hilaricord.vercel.app/" target="_blank">Here is a live demo of project,<br/> check it out!</a>
 </div>
 
 <h1 align="center"><img height="30px" src="https://github.com/rvahilario/hilaricord/blob/main/public/frameGOWlogo.png" /> Hilaricord <img height="30px" src="https://github.com/rvahilario/hilaricord/blob/main/public/frameGOWlogo.png" /></h1>
