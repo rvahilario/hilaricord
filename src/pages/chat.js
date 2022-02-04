@@ -94,14 +94,14 @@ export default function ChatPage({ user }) {
 								onSelect={onEmojiClick}
 								set="apple"
 								style={{
-									width: '88%',
-									height: '100%',
+									maxWidth: '400px',
+									width: '92%',
+									height: 'auto',
 									position: 'absolute',
-									top: '-65px',
-									left: '50px',
+									left: '4%',
+									bottom: '57px',
 								}}
 								showPreview={false}
-								// native={true}
 								theme={'dark'}
 								showSkinTones={false}
 								useButton={false}
