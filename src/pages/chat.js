@@ -92,6 +92,7 @@ export default function ChatPage({ user }) {
 						{showEmojis && (
 							<Picker
 								onSelect={onEmojiClick}
+								set="apple"
 								style={{
 									width: '88%',
 									height: '100%',
@@ -104,7 +105,7 @@ export default function ChatPage({ user }) {
 								theme={'dark'}
 								showSkinTones={false}
 								useButton={false}
-								sheetSize={20}
+								sheetSize={64}
 							/>
 						)}
 						<InputText
