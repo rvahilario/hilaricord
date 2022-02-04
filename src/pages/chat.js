@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import supabase from '../client';
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
+import { Picker } from 'emoji-mart';
+import 'emoji-mart/css/emoji-mart.css';
 
 import BackgroundStatic from '../components/background/BackgroundStatic';
 import ChatContainer from '../components/boxs/ChatContainer';
@@ -11,10 +13,12 @@ import InputText from '../components/inputText/InputText';
 import InputBox from '../components/boxs/InputBox';
 import { Button } from '../components/button/Button';
 import { IoIosSend } from 'react-icons/io';
+import { BsEmojiLaughing } from 'react-icons/bs';
 
 export default function ChatPage({ user }) {
 	const [message, setMessage] = useState('');
 	const [listMessages, setListMessages] = useState([]);
+	const [showEmojis, setShowEmojis] = useState(false);
 
 	useEffect(() => {
 		supabase
@@ -63,6 +67,11 @@ export default function ChatPage({ user }) {
 		}
 	};
 
+	const onEmojiClick = (emoji) => {
+		setMessage((prevInput) => prevInput + emoji.native);
+		setShowEmojis(false);
+	};
+
 	let showInfo = true;
 
 	return (
@@ -77,6 +86,27 @@ export default function ChatPage({ user }) {
 						showInfo={showInfo}
 					/>
 					<InputBox>
+						<Button onClick={() => setShowEmojis((value) => !value)}>
+							<BsEmojiLaughing />
+						</Button>
+						{showEmojis && (
+							<Picker
+								onSelect={onEmojiClick}
+								style={{
+									width: '88%',
+									height: '100%',
+									position: 'absolute',
+									top: '-65px',
+									left: '50px',
+								}}
+								showPreview={false}
+								native={true}
+								theme={'dark'}
+								showSkinTones={false}
+								useButton={false}
+								sheetSize={20}
+							/>
+						)}
 						<InputText
 							value={message}
 							placeholder={'Message'}
